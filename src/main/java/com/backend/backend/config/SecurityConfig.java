@@ -15,7 +15,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter implements WebM
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
-                .allowedOrigins("http://localhost:8080", "https://voxxus-test-app-dev.herokuapp.com")
+                .allowedOrigins("http://localhost:8080",
+                        "https://remote-cinema-dev.herokuapp.com/",
+                        "https://remote-cinema.herokuapp.com/")
                 .allowedMethods("*");
     }
 }
